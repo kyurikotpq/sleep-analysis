@@ -2,26 +2,20 @@
 
 In 2016, in order to keep up with school work and study for the secondary school national examinations, I forced myself to sleep less than 6.5 hours a day. Despite trying to sleep more in high school and college, I realized that I would always wake up at around the 6-hour mark. Even if I managed to sleep 7 hours or more, I always woke up feeling more exhausted than the day before.
 
-This repository contains my analysis, visualization, and interpretation of my sleep data using Python.
+I finally got a smartwatch in January 2024 to investigate. This repository contains my analysis, visualization, and interpretation of my sleep data using Python.
 
-## Data collection methods
+## Data Description
 
-### Heart rate and sleep data
-Over a period of ~6 months (July 1, 2022 to January 26, 2023), I tracked my sleep using my Xiaomi Mi Band 5 smartwatch. The exported data can be found in the `raw-data/` folder.
+### `data/shr_v_temp_phase.csv`
 
-> There are some days where I didn't wear my watch to sleep; I will account for that when cleaning my data.
+#### Heart rate (HR), Heart rate variability (HRV)
+I've worn my Samsung Galaxy Watch 6 every night since I got it in January 2024. However, it wasn't until the Samsung Health app introduced "energy scores" on December 17, 2024 that I got easy access to my sleeping HR and HRV data.
 
-### Period data
-Since February 2022, I also manually tracked the first day of my period in Google Calendar. I have compiled the data in a CSV file, also in the `raw-data/` folder.
+#### Period & Basal Body Temperature data
+I only have basal body temperature data from August 2024, and I used Samsung Health's ovulation predictions and manually-tracked period dates to determine the menstrual cycle phase for each day (follicular VS luteal).
 
-### Exercise data
-Finally, in September 2022, I started exercising more vigorously and regularly, through twice-weekly Hapkido sessions. While I didn't wear my watch during classes (so my heart rate wasn't tracked), I kept track of which days the sessions happened in Google Calendar. I have also compiled the data in a CSV file, also in the `raw-data/` folder.
+### `data/daytime_naps.csv`
+Contains the daytime nap sessions (sleep sessions that start between 6am and 6pm, recorded by Samsung Galazy Watch 6)
 
-## Questions to explore
-
-- Is my sleep quality truly as poor as I feel it is?
-- Is deep sleep affected by starting sleep time? Or is deep sleep more strongly correlated with the absolute hours of the night?
-- Is deep sleep affected by which stage of the menstrual cycle I'm currently in?
-- Does intense exercise (i.e. Hapkido sessions) increase the amount of deep sleep?
-
-
+### `data/nighttime_sleep.csv`
+Contains the nighttime sleep sessions recorded by Samsung Galazy Watch 6.
